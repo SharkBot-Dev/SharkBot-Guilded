@@ -17,7 +17,8 @@ class Bot(commands.Cog):
                         "!.about - Information about the bot\n"
                         "!.help - Display this help message\n"
                         "!.kick <member> - Kick a member (requires permissions)\n"
-                        "!.ban <user> [reason] - Ban a user (requires permissions)",
+                        "!.ban <user> [reason] - Ban a user (requires permissions)\n"
+                        "!.clear <count> - Clear messages (requires permissions)\n",
             color=guilded.Color.green()
         ))
 
