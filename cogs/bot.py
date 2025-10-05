@@ -32,7 +32,9 @@ class Bot(commands.Cog):
                         "!.help - Display this help message\n"
                         "!.kick <member> - Kick a member (requires permissions)\n"
                         "!.ban <user> [reason] - Ban a user (requires permissions)\n"
+                        "!.unban <user_id> - Unban a user (requires permissions)\n"
                         "!.clear <count> - Clear messages (requires permissions)\n"
+                        "!.user [userid] - Get information about a user\n"
                         "!.roll [sides] - Roll a dice with specified sides (default is 6)\n",
             color=guilded.Color.green()
         ))
