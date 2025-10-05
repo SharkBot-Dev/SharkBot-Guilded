@@ -1,17 +1,15 @@
 from guilded.ext import commands
 
-from cogs.bot import Bot
-from cogs.mod import Mod
-
 import dotenv
 import os
 
 dotenv.load_dotenv()
 
-bot = commands.Bot(user_id='mbbGvlVm', command_prefix='!.')
+bot = commands.Bot(user_id='mbbGvlVm', command_prefix='!.', help_command=None, owner_id='dKnXkYB4')
 
-bot.add_cog(Bot(bot))
-bot.add_cog(Mod(bot))
+for cog in os.listdir('./cogs'):
+    if cog.endswith('.py'):
+        bot.load_extension(f'cogs.{cog[:-3]}')
 
 @bot.event
 async def on_ready():
