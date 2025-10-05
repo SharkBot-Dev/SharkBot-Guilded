@@ -19,6 +19,12 @@ class Mod(commands.Cog):
         await ctx.send(f'Banned {user.name}.')
 
     @commands.command()
+    @commands.has_server_permissions(ban_members=True)
+    async def unban(self, ctx: commands.Context, user: guilded.User):
+        await ctx.guild.unban(user)
+        await ctx.send(f'UnBanned {user.name}.')
+
+    @commands.command()
     @commands.has_server_permissions(administrator=True)
     async def clear(self, ctx: commands.Context, count: int):
         if count < 1 or count > 15:
